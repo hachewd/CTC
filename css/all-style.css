@@ -30,25 +30,29 @@ body{
 .linetop{
 	background: #f1f0ee;
 	border-bottom: dashed 1px #998675;
-	min-height: 33px;
+	height: 33px;
+	overflow: hidden;
 }
 .headerbar{
 	background: url(../images/top_lines.jpg);
 	border-bottom: #383838 2px solid;
-	box-shadow:  0px 3px 10px #333;
-	height: 122px;
+	box-shadow:  0px 3px 10px rgba(0,0,0,0.5);
+	min-height: 122px;
 	position: relative;
 }
 .widpages{
 	display: block;
 	margin: 0 auto;
 }
-.socialmedia,.secmenu{
+.widpages nav.second{
+	margin-left:50%;
+}
+.socialmedia,.secmenu, .menuprin{
 	display: inline-block;
 	list-style: none;
 	margin:0;
 	padding: 0;
-	vertical-align: top;	
+	vertical-align: top;
 }
 .socialmedia{
 	margin-right: 3%;
@@ -91,10 +95,31 @@ body{
 	margin-top:3px;
 	padding: 5px 10px;
 }
+.headerbar figure{
+	display: inline-block;
+	position: relative;
+	vertical-align:top;
+	width: 182px;
+}
+.headerbar .first{
+	display: inline-block;
+	vertical-align: top;
+}
+.headerbar figure img{
+	position: absolute;
+	top:-40px;
+	width: 100%;
+}
 
 @media screen and (min-width:320px) and (max-width:480px) {
 	.widpages{
 		width:98%;
+	}
+	.widpages nav.second{
+		margin-left:0;
+	}
+	.secmenu{
+		float: right;
 	}
 	.share,.legal, .registro,.ingresar{
 		font-family: 'icomoon';
@@ -119,6 +144,12 @@ body{
 	.ingresar:before {
 		content: "\e00a";
 	}
+	.headerbar figure{
+		left: 22%;
+	}
+	.headerbar figure img{
+		width: 200px;
+	}
 }
 @media screen and (min-width:768px) and (max-width:1024px) {
 	.widpages{
@@ -127,6 +158,6 @@ body{
 }
 @media only screen and (min-width : 1224px) {
 	.widpages{
-		width:70%;
+		width:60%;
 	}
 }
